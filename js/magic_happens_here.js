@@ -1,39 +1,39 @@
-   
+
     /*******************************
             Abstracted Functions
     *******************************/
-    
-    // Gets data from provided url 
+
+    // Gets data from provided url
     // and updates DOM element (element variable)
     function generate_os_data(url, element){
         $.get( url, function( data ) {
           $(element).text(data);
         } );
     }
-    
+
     // If dataTable with proved ID (table_id)
-    // exists, destroy it. Obliterate it. 
+    // exists, destroy it. Obliterate it.
     // Leave no evidence.
     function destroy_dataTable(table_id){
         var table = $('#'+table_id);
-        
+
         var ex = document.getElementById(table_id);
         if ( $.fn.DataTable.fnIsDataTable( ex ) ) {
-    		table.hide().dataTable().fnClearTable();                         
+    		table.hide().dataTable().fnClearTable();
         	table.dataTable( ).fnDestroy();
     	}
     }
-    
+
     // Function and variables to refresh page data &
-    // counter on top right of page 
+    // counter on top right of page
     var page_refresh_counter = $('#page_data_refresh');
     function page_data_refresh_tick(){
-        
-        if (Number( page_refresh_counter.text() )==0){ 
+
+        if (Number( page_refresh_counter.text() )==0){
             refresh_all();
             page_refresh_counter.fadeOut().text(20).fadeIn();
             setTimeout(function(){ page_data_refresh_tick(); },1000);
-            return false; 
+            return false;
         }
         else{
             setTimeout(function(){
@@ -42,19 +42,19 @@
             },1000);
         }
     }
-    
-    
-    
+
+
+
     /*******************************
             Data Call Functions
     *******************************/
-    
+
     function get_ps(){
-        
+
         $.get( "sh/ps.php", function( data ) {
-           
+
         	destroy_dataTable('ps_dashboard');
-        	
+
             $('#ps_dashboard').dataTable({
                 "aaData": data,
                 "aoColumns": [
@@ -77,15 +77,15 @@
                 "bInfo": false
             }).fadeIn();
         }, "json" );
-        
+
     }
-    
+
     function get_users(){
-        
+
         $.get( "sh/users.php", function( data ) {
-          
+
             destroy_dataTable('users_dashboard');
-            
+
             $('#users_dashboard').dataTable({
                 "aaData": data,
                 "aoColumns": [
@@ -101,41 +101,41 @@
                 "bAutoWidth": false,
                 "bInfo": false
             }).fadeIn();
-        
+
         }, "json" );
-        
+
      $('select[name="users_dashboard_length"]').val('5');
     }
-    
+
     function get_ram(){
         $.get( "sh/mem.php", function( data ) {
           var ram_total = data[1];
           var ram_used = parseInt( (data[2]/ram_total)*100);
           var ram_free = parseInt( (data[3]/ram_total)*100);
-          
+
           $('#ram-total').text(ram_total);
           $('#ram-used').text(data[2]);
           $('#ram-free').text(data[3]);
-          
+
           $('#ram-free-per').text( ram_free );
           $('#ram-used-per').text( ram_used );
-          
+
         }, "json" );
     }
 
     function get_df(){
-        
+
         $.get( "sh/df.php", function( data ) {
-          
+
             var table = $('#df_dashboard');
-            
-            var ex = document.getElementById('df_dashboard');        
+
+            var ex = document.getElementById('df_dashboard');
             if ( $.fn.DataTable.fnIsDataTable( ex ) ) {
-        		table.hide().dataTable().fnClearTable();                         
+        		table.hide().dataTable().fnClearTable();
             	table.dataTable( ).fnDestroy();
-            	 
+
         	}
-        	
+
             table.dataTable({
                 "aaData": data,
                 "aoColumns": [
@@ -151,22 +151,22 @@
                 "bAutoWidth": true,
                 "bInfo": false
             }).fadeIn();
-          
+
         }, "json" );
     }
-    
+
     function get_whereis(){
-        
+
         $.get( "sh/whereis.php", function( data ) {
-          
+
             var table = $('#whereis_dashboard');
-            
-            var ex = document.getElementById('whereis_dashboard');        
+
+            var ex = document.getElementById('whereis_dashboard');
             if ( $.fn.DataTable.fnIsDataTable( ex ) ) {
-                table.hide().dataTable().fnClearTable();                         
+                table.hide().dataTable().fnClearTable();
                 table.dataTable( ).fnDestroy();
             }
-            
+
             table.dataTable({
                 "aaData": data,
                 "aoColumns": [
@@ -179,21 +179,21 @@
                 "bAutoWidth": false,
                 "bInfo": false
             }).fadeIn();
-        
+
         }, "json" );
     }
-    
-    function get_os_info(){ 
+
+    function get_os_info(){
         generate_os_data('sh/issue.php','#os-info');
         generate_os_data('sh/hostname.php','#os-hostname');
         generate_os_data('sh/uptime.php','#os-uptime');
     }
-    
+
     function get_ip(){
         $.get( 'sh/ip.php', function( data ) {
-            
+
             destroy_dataTable('ip_dashboard');
-            
+
             $('#ip_dashboard').dataTable({
                 "aaData": data,
                 "aoColumns": [
@@ -205,7 +205,7 @@
                 "bAutoWidth": true,
                 "bInfo": false
             }).fadeIn();
-            
+
         }, 'json' );
     }
 
@@ -215,10 +215,10 @@
         var startTime, endT
         var downloadSize = 112230.4;
         var download = new Image();
-        
+
         startTime = (new Date()).getTime();
         download.src = imageAddr;
-        
+
         download.onload = function () {
             endTime = (new Date()).getTime();
             var duration = (endTime - startTime) / 1000;
@@ -231,18 +231,18 @@
         }
 
     }
-    
+
     function get_ispeed(){
-        setTimeout(function(){ 
-            get_ispeed_execute(); 
+        setTimeout(function(){
+            get_ispeed_execute();
         },700);
-        setTimeout(function(){ 
+        setTimeout(function(){
             $('#ispeed-rate').text(ispeedMbps);
         },1000);
-        
-        
+
+
     }
-    /* 
+    /*
         Function that calls all the other functions which refresh
         each individual widget
     */
@@ -256,8 +256,23 @@
         get_ip();
         get_ispeed();
     }
-    
+
     // Initialize Page function calls
-    refresh_all();
+
     //page_data_refresh_tick();
-    
+
+
+
+$(document)
+    .ready(function () {
+        refresh_all();
+    })
+    .on('click', '.js-refresh-os', get_os_info)
+    .on('click', '.js-refresh-ram', get_ram)
+    .on('click', '.js-refresh-df', get_df)
+    .on('click', '.js-refresh-users', get_users)
+    .on('click', '.js-refresh-whereis', get_whereis)
+    .on('click', '.js-refresh-ip', get_ip)
+    .on('click', '.js-refresh-speed', get_ispeed)
+    .on('click', '.js-refresh-ps', get_ps);
+

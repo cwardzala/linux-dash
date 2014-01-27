@@ -9,27 +9,27 @@ Bootstrap Admin Template by EGrappler.com
 */
 
 .shortcuts {
-	text-align: center;	
+	text-align: center;
 }
 
-.shortcuts .shortcut { 
+.shortcuts .shortcut {
 	width: 22.50%;
 	display: inline-block;
 	padding: 12px 0;
 	margin: 0 .9% 1em;
-	vertical-align: top;	
-	
+	vertical-align: top;
+
 	text-decoration: none;
-	
+
 	background: #f9f6f1;
-	
+
 	border-radius: 5px;
 }
 
 .shortcuts .shortcut .shortcut-icon {
 	margin-top: .25em;
 	margin-bottom: .25em;
-	
+
 	font-size: 32px;
 	color: #545454;
 }
@@ -48,7 +48,7 @@ Bootstrap Admin Template by EGrappler.com
 
 .shortcuts .shortcut-label {
 	display: block;
-	
+
 	font-weight: 400;
 	color: #545454;
 }
@@ -71,7 +71,7 @@ Bootstrap Admin Template by EGrappler.com
 	display: table-cell;
 	width: 40%;
 	vertical-align: top;
-	
+
 	font-size: 11px;
 	font-weight: bold;
 	color: #999;
@@ -80,7 +80,7 @@ Bootstrap Admin Template by EGrappler.com
 .stat-value {
 	display: block;
 	margin-bottom: .55em;
-	
+
 	font-size: 30px;
 	font-weight: bold;
 	letter-spacing: -2px;
@@ -99,7 +99,7 @@ Bootstrap Admin Template by EGrappler.com
 
 .stats #donut-chart {
 	height: 100px;
-	margin-left: -20px;	
+	margin-left: -20px;
 }
 
 
@@ -141,27 +141,27 @@ Bootstrap Admin Template by EGrappler.com
 	width: 75px;
 	vertical-align: middle;
 	text-align: center;
-	
+
 }
 
 .news-item-day {
 	display: block;
 	margin-bottom: .25em;
-	
+
 	font-size: 24px;
 	color: #888;
 }
 
 .news-item-preview {
 	margin-bottom: 0;
-	
+
 	color: #777;
 }
 
 .news-item-month {
 	display: block;
-	padding-right: 1px;	
-	
+	padding-right: 1px;
+
 	font-size: 12px;
 	font-weight: 600;
 	color: #888;
@@ -175,33 +175,33 @@ Bootstrap Admin Template by EGrappler.com
 
 .action-table .btn-small {
 	padding: 4px 5px 5px;
-	
+
 	font-size: 10px;
 }
 
-.action-table .td-actions { 
-	width: 80px; 
-	
-	text-align: center; 
+.action-table .td-actions {
+	width: 80px;
+
+	text-align: center;
 }
 
-	.action-table .td-actions .btn { 
-		margin-right: .5em;		
+	.action-table .td-actions .btn {
+		margin-right: .5em;
 	}
-	
-	.action-table .td-actions .btn:last-child { 
-		margin-rigth: 0; 		
+
+	.action-table .td-actions .btn:last-child {
+		margin-rigth: 0;
 	}
-	
-	
-	
-#big_stats 
-{ 
-	width: 100%; 
+
+
+
+#big_stats
+{
+	width: 100%;
 	display: table;
 	margin-top: 1.5em;
-	
-	
+
+
 }
 
 .big-stats-container .widget-content {
@@ -216,7 +216,7 @@ Bootstrap Admin Template by EGrappler.com
 	display: table-cell;
 	padding: 0;
 	position: relative;
-	
+
 	border-right: 1px solid #CCC;
 	border-left: 1px solid #FFF;
 }
@@ -258,21 +258,21 @@ margin-bottom: 26px;}
 
 
 @media all and (max-width: 950px) and (min-width: 1px) {
-	
+
 	#big_stats {
 		display: block;
 		margin-bottom: -10px;
 	}
-	
+
 	#big_stats .stat {
 		width: 25%;
 		display: block;
 		margin-bottom: 1em;
 		float: left;
-	}	
-	
-	
-	
+	}
+
+
+
 }
 
 @media (max-width: 767px) {
@@ -280,12 +280,12 @@ margin-bottom: 26px;}
 		font-size: 25px;
 	}
 }
-	
-	
-	
-	
+
+
+
+
 @media (max-width: 979px) {
-	
+
 	.shortcuts .shortcut {
 		width: 31%;
 	}
@@ -293,30 +293,30 @@ margin-bottom: 26px;}
 
 
 @media (max-width: 480px) {
-	
+
 	.stats .stat {
-		
+
 		margin-bottom: 3em;
 	}
-	
+
 	.stats .stat .stat-value {
 		margin-bottom: .15em;
-		
+
 		font-size: 20px;
 	}
-	
+
 	.stats {
 		float: left;
-		
+
 		display: block;
-		
+
 		margin-bottom: 0;
 	}
-	
+
 	#chart-stats {
-		margin: 2em 0 1em;		
+		margin: 2em 0 1em;
 	}
-	
+
 	.shortcuts .shortcut {
 		width: 48%;
 	}
@@ -334,12 +334,7 @@ margin-bottom: 26px;}
 .pulse-border{
    border-color:#19bc9c;
 }
-.navbar{
-   position:fixed;
-   top:0;
-   z-index:9999999;
-   width:100%;
-}
+
 .subnavbar{
    position:fixed;
    top:50px;
@@ -349,7 +344,7 @@ margin-bottom: 26px;}
 .main{
    margin-top:130px;
 }
-.dataTables_paginate{ width:100%; text-align:center; margin-top:10px; margin-left:-30px;}
+.dataTables_paginate{ width:100%; text-align:center; margin-top:10px; margin-bottom:10px;}
 .dataTables_paginate a{ margin-left:8px;}
 .dataTables_paginate a:hover{ pointer:pointer;}
 .navbar-fixed-top{  margin-left:0px;}
