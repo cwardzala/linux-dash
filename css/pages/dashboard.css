@@ -222,7 +222,7 @@ Bootstrap Admin Template by EGrappler.com
 }
 
 #big_stats  i { font-size:20px; display:block; line-height: 30px; color:#b2afaa;}
-#big_stats .stat i {color:#19bc9c;}
+#big_stats .stat i {color:dodgerblue;}
 
 h6.bigstats{margin: 20px;
 border-bottom: 1px solid #eee;
@@ -335,16 +335,17 @@ margin-bottom: 26px;}
    border-color:#19bc9c;
 }
 
-.subnavbar{
-   position:fixed;
-   top:50px;
-   z-index:9999999;
-   width:100%;
+
+.dataTables_paginate {
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:10px;
 }
-.main{
-   margin-top:130px;
+.dataTables_paginate a {
+    margin:0 4px;
 }
-.dataTables_paginate{ width:100%; text-align:center; margin-top:10px; margin-bottom:10px;}
-.dataTables_paginate a{ margin-left:8px;}
-.dataTables_paginate a:hover{ pointer:pointer;}
+.dataTables_paginate a:hover {
+    cursor:pointer;
+}
 .navbar-fixed-top{  margin-left:0px;}
