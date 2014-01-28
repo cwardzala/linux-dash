@@ -149,11 +149,9 @@
                                 </div>
                                 <!-- /widget-header -->
 
-                                <!-- <div class="panel-body">
-                                    <div class="btn btn-error">Test</div>
-
-                                </div> -->
-                                <table id="df_dashboard" class="table table-hover table-condensed"></table>
+                                <div class="table-responsive">
+                                    <table id="df_dashboard" class="table table-hover table-condensed"></table>
+                                </div>
                                 <!-- /widget-content -->
                             </div>
                             <!-- /widget -->
@@ -171,10 +169,9 @@
                                 </div>
                                 <!-- /widget-header -->
 
-                                <!-- <div class="widget-content">
-
-                                </div> -->
-                                <table id="users_dashboard" class="table table-hover table-condensed"></table>
+                                <div class="table-responsive">
+                                    <table id="users_dashboard" class="table table-hover table-condensed"></table>
+                                </div>
                                 <!-- /widget-content -->
                             </div>
                             <!-- /widget -->
@@ -197,10 +194,9 @@
                                 </div>
                                 <!-- /widget-header -->
 
-                                <!-- <div class="widget-content">
-
-                                </div> -->
-                                <table id="whereis_dashboard" class="table table-hover table-condensed"></table>
+                                <div class="table-responsive">
+                                    <table id="whereis_dashboard" class="table table-hover table-condensed"></table>
+                                </div>
                                 <!-- /widget-content -->
                             </div>
                             <!-- /widget -->
@@ -219,7 +215,9 @@
                                 </div>
                                 <!-- /widget-header -->
 
-                                <table id="ip_dashboard" class="table table-hover table-condensed"></table>
+                                <div class="table-responsive">
+                                    <table id="ip_dashboard" class="table table-hover table-condensed"></table>
+                                </div>
                                 <!-- /widget-content -->
                             </div>
                             <!-- /widget -->
@@ -261,7 +259,10 @@
                                     </a>
                                 </div>
                                 <!-- /widget-header -->
-                                <table id="ps_dashboard" class="table table-hover table-condensed"></table>
+
+                                <div class="table-responsive">
+                                    <table id="ps_dashboard" class="table table-hover table-condensed"></table>
+                                </div>
                                 <!-- /widget-content -->
                             </div>
                             <!-- /widget -->
@@ -279,11 +280,7 @@
         <!-- /main-inner -->
 
         <div class="footer">
-            <div class="footer-inner">
-
-            </div>
-
-            <!-- /footer-inner -->
+            <div class="footer-inner"></div>
         </div>
         <!-- /footer -->
 
